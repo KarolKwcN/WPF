@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:zaj1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1215.592" Width="1463.158">
-    <Grid Margin="-272,-447,0,0">
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Pierwsza aplikacja" HorizontalAlignment="Left" Margin="338,30,0,0" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="354,79,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click"/>
+        <TextBox Name="pole1" HorizontalAlignment="Left" Height="23" Margin="312,138,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
