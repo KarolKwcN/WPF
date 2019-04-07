@@ -20,14 +20,41 @@ namespace zaj1
     /// </summary>
     public partial class MainWindow : Window
     {
+        Stos stosik { get; set; }
+       
         public MainWindow()
         {
             InitializeComponent();
+            this.stosik = new Stos();
+
+            wynik.Content = "Stos jest pusty";
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(pole1.Text);
+            string a = pole.Text;
+            stosik.push(a);
+        
+            wynik.Content = stosik.top();
+            
+        }
+
+        private void Przycisk_pop_Click(object sender, RoutedEventArgs e)
+        {
+            if (stosik.empty())
+            {
+                wynik.Content = "Stos jest pusty";
+            }
+            else
+            {
+                stosik.pop();
+                wynik.Content = stosik.top();
+                if(stosik.empty())
+                {
+                    wynik.Content = "Stos jest pusty";
+                }
+            }
         }
     }
 }

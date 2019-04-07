@@ -27,15 +27,15 @@ namespace zaj1
 
         public string top()
         {
-            return this.stosik.Last();
-
+          
+            return this.stosik.LastOrDefault();
         }
 
         public bool empty()
         {
             if(this.stosik.Count == 0)
             {
-
+                return true;
             }
 
             return false;
